@@ -3,26 +3,21 @@ on:
 
 push:
   branches:
-    
-     -master
+     - master
 
 
 
 
 
 jobs:
-
    build:
-   
        runs-on: ubuntu-latest
 
+    
+          
 
+         - uses: actions/checkout@v3
 
-      steps:
-         -name: "Testing Github action'
-         run: pwd
-
-
-         -name: "printing folder contents"
-         run: ls
+         - name: "login to docker hub"
+           run: docker login --username amiraabozied --password dckr_pat_nAXImYNnlTjfimV4bUM_dLDWTt8
   
